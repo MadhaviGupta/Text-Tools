@@ -1,5 +1,4 @@
 import React from "react";
-import { Link } from "react-router-dom";
 import PropTypes from "prop-types";
 import LightModeIcon from "@mui/icons-material/LightMode";
 import DarkModeIcon from "@mui/icons-material/DarkMode";
@@ -10,9 +9,9 @@ export default function Navbar(props) {
       className={`navbar navbar-expand-lg navbar-${props.mode} bg-${props.mode}`}
     >
       <div className="container-fluid">
-        <Link className="navbar-brand mx-2" to="/">
+        <a className="navbar-brand mx-2" to="/">
         Textalyzer
-        </Link>
+        </a>
         {props.mode === "light" ? (
           <LightModeIcon className="mx-2" onClick={props.toggleMode} />
         ) : (

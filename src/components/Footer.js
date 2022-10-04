@@ -1,17 +1,12 @@
 import React from "react";
 import GitHubIcon from "@mui/icons-material/GitHub";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
-import GoogleIcon from "@mui/icons-material/Google";
-import EmailIcon from "@mui/icons-material/Email";
-
 export default function Footer(props) {
   return (
     <>
       <footer className="text-center">
         <div className="container pt-4">
-          {/* Section: Social media */}
           <section>
-            {/* Linkedin */}
             <a
               className={`btn btn-link btn-floating btn-lg text-${
                 props.mode === "light" ? "dark" : "light"
@@ -22,7 +17,6 @@ export default function Footer(props) {
             >
               <LinkedInIcon />
             </a>
-            {/* Github */}
             <a
               className={`btn btn-link btn-floating btn-lg text-${
                 props.mode === "light" ? "dark" : "light"
@@ -46,7 +40,6 @@ export default function Footer(props) {
           </a>
           using ReactJS
         </div>
-        {/* Copyright */}
       </footer>
     </>
   );

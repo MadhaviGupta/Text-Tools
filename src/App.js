@@ -2,7 +2,6 @@ import "./App.css";
 import React, { useState } from "react";
 import Navbar from "./components/Navbar";
 import Textform from "./components/Textform";
-import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import Footer from "./components/Footer";
 
 function App() {
@@ -25,13 +24,11 @@ function App() {
 
   return (
     <>
-      <Router>
         <Navbar mode={mode} toggleMode={toggleMode} />
         <div className="container my-3">
           <Textform mode={mode} />
         </div>
         <Footer mode={mode} />
-      </Router>
     </>
   );
 }
