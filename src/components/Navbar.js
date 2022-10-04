@@ -10,7 +10,7 @@ export default function Navbar(props) {
     >
       <div className="container-fluid">
         <a className="navbar-brand mx-2" to="/">
-        Textalyzer
+        TextUtils
         </a>
         {props.mode === "light" ? (
           <LightModeIcon className="mx-2" onClick={props.toggleMode} />
