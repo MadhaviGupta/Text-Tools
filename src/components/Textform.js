@@ -12,21 +12,13 @@ export default function Textform(props) {
     let lwText = text.toLowerCase();
     setText(lwText);
   };
-  const tocapitalize = () => {
+  const toTitleCase = () => {
     let titleText = text.toLowerCase().split(" ");
     for (var i = 0; i < titleText.length; i++) {
       titleText[i] =
         titleText[i].charAt(0).toUpperCase() + titleText[i].slice(1);
     }
     setText(titleText.join(" "));
-  };
-  const toSentenceCase = () => {
-    let sentText = text.toLowerCase().split();
-    for (var i = 0; i < sentText.length; i++) {
-      sentText[i] =
-        sentText[i].charAt(0).toUpperCase() + sentText[i].slice(1);
-    }
-    setText(sentText.join(" "));
   };
   const removeSpaces = () => {
     let removedText = text.replace(/\s+/g, " ");
@@ -45,7 +37,7 @@ export default function Textform(props) {
       type: "text/plain",
     });
     element.href = URL.createObjectURL(file);
-    element.download = "textutils.txt";
+    element.download = "TextTools.txt";
     document.body.appendChild(element);
     element.click();
   };
@@ -86,17 +78,9 @@ export default function Textform(props) {
         className={`btn btn-sm btn-outline-${
           props.mode === "dark" ? "light" : "dark"
         } mx-2 my-1`}
-        onClick={tocapitalize}
+        onClick={toTitleCase}
       >
-        Capitalize Word
-      </button>
-      <button
-        className={`btn btn-sm btn-outline-${
-          props.mode === "dark" ? "light" : "dark"
-        } mx-2 my-1`}
-        onClick={toSentenceCase}
-      >
-        Convert to Sentence Case
+        Convert to Title Case
       </button>
       <button
         className={`btn btn-sm btn-outline-${
@@ -127,9 +111,6 @@ export default function Textform(props) {
           props.mode === "dark" ? "light" : "dark"
         } mx-2 my-1`}
         onClick={downloadFile}
-        data-bs-toggle="tooltip"
-        data-bs-placement="top"
-        data-bs-title="Tooltip on top"
       >
         <DownloadIcon />
       </button>
@@ -149,8 +130,13 @@ export default function Textform(props) {
         sentences
       </p>
       <p>
-        <b>{text.length === 0 ? 0 : 0.008 * text.split(" ").length}</b> minutes
-        taken to read (approximation)
+        <b>{text.length > 0 ? text.replace(/\n$/gm, "").split(/\n/).length : 0}</b> paragraphs
+      </p>
+      <p>
+        <b>
+          {(text.length === 0 ? 0 : 0.008 * text.split(" ").length).toFixed()}
+        </b>{" "}
+        minutes taken to read (approximation)
       </p>
     </>
   );
