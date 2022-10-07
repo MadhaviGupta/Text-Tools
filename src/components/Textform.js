@@ -96,7 +96,7 @@ export default function Textform(props) {
         } mx-2 my-1`}
         onClick={copyText}
       >
-        Copy Text
+        Copy to Clipboard
       </button>
       <button
         className={`btn btn-sm btn-outline-${
@@ -126,11 +126,14 @@ export default function Textform(props) {
         <b>{text.length > 0 ? text.trim().split(" ").length : 0}</b> words
       </p>
       <p>
-        <b>{text.length > 0 ? text.trim().split(".").length - 1 : 0}</b>{" "}
+        <b>{text.length > 0 ? text.trim().split(/[.!?]/).length - 1 : 0}</b>{" "}
         sentences
       </p>
       <p>
-        <b>{text.length > 0 ? text.replace(/\n$/gm, "").split(/\n/).length : 0}</b> paragraphs
+        <b>
+          {text.length > 0 ? text.replace(/\n$/gm, "").split(/\n/).length : 0}
+        </b>{" "}
+        paragraphs
       </p>
       <p>
         <b>
