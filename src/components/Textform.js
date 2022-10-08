@@ -139,7 +139,7 @@ export default function Textform(props) {
         <b>
           {(text.length === 0 ? 0 : 0.008 * text.split(" ").length).toFixed()}
         </b>{" "}
-        minutes taken to read (approximation)
+        minutes to read (approximation)
       </p>
     </>
   );
