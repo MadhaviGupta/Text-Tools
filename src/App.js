@@ -1,9 +1,8 @@
 import "./App.css";
 import React, { useState } from "react";
-import Navbar from "./components/Navbar";
-import Textform from "./components/Textform";
-import Footer from "./components/Footer";
-
+import Navbar from "../src/components/Navbar";
+import Textform from "../src/components/Textform";
+import Footer from "../src/components/Footer";
 function App() {
   const [mode, setMode] = useState("light");
   const toggleMode = () => {
@@ -24,11 +23,11 @@ function App() {
 
   return (
     <>
-        <Navbar mode={mode} toggleMode={toggleMode} />
-        <div className="container my-3">
-          <Textform mode={mode} />
-        </div>
-        <Footer mode={mode} />
+      <Navbar mode={mode} toggleMode={toggleMode} />
+      <div className="container my-3">
+        <Textform mode={mode} />
+      </div>
+      <Footer mode={mode} />
     </>
   );
 }

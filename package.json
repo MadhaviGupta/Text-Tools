@@ -1,5 +1,5 @@
 {
-  "homepage": "https://madhavigupta.github.io/Text-Tools",
+  "home":"https://flourishing-llama-87c535.netlify.app/",
   "name": "my-first-app",
   "version": "0.1.0",
   "private": true,
@@ -16,8 +16,7 @@
     "web-vitals": "^2.1.4"
   },
   "scripts": {
-    "predeploy": "npm run build",
-    "deploy": "gh-pages -d build",
+  
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",

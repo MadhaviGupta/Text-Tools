@@ -123,7 +123,14 @@ export default function Textform(props) {
         <b>{text.split(" ").join("").length}</b> characters (excluding spaces)
       </p>
       <p>
-        <b>{text.length > 0 ? text.trim().split(" ").length : 0}</b> words
+        <b>
+          {text.length > 0
+            ? text.trim().split(" ").length +
+              text.replace(/\n$/gm, "").split(/\n/).length -
+              1
+            : 0}
+        </b>{" "}
+        words
       </p>
       <p>
         <b>{text.length > 0 ? text.trim().split(/[.!?]/).length - 1 : 0}</b>{" "}
