@@ -36,7 +36,7 @@ export default function Footer(props) {
         >
           Made by
           <a href="mailto:madhavigupta1225@gmail.com" className="mx-1">
-            Madhavi
+            Madhavi Gupta 
           </a>
           using ReactJS
         </div>
