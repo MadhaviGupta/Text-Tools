@@ -24,7 +24,7 @@ function App() {
   return (
     <>
       <Navbar mode={mode} toggleMode={toggleMode} />
-      <div className="container my-3">
+      <div className="container my-4">
         <Textform mode={mode} />
       </div>
       <Footer mode={mode} />
