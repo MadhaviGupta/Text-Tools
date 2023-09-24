@@ -21,7 +21,7 @@ export default function Textform(props) {
     setText(titleText.join(" "));
   };
   const removeSpaces = () => {
-    let removedText = text.replace(/\s+/g, " ");
+    let removedText = text.replace(/\s+/g, "");
     setText(removedText);
   };
   const clearText = () => {
