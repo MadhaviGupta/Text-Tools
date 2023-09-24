@@ -9,9 +9,9 @@ export default function Navbar(props) {
       className={`navbar navbar-expand-lg navbar-${props.mode} bg-${props.mode}`}
     >
       <div className="container-fluid">
-        <a className="navbar-brand mx-2" href="/">
+        <h1 className="navbar-brand mx-2" href="/">
         TextTools
-        </a>
+        </h1>
         {props.mode === "light" ? (
           <LightModeIcon className="mx-2" onClick={props.toggleMode} />
         ) : (
