@@ -1,5 +1,7 @@
 import React, { useState } from "react";
-import DownloadIcon from "@mui/icons-material/Download";
+import { BsDownload } from "react-icons/bs";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 export default function Textform(props) {
   const [text, setText] = useState("");
@@ -7,10 +9,12 @@ export default function Textform(props) {
   const toUpCase = () => {
     let upText = text.toUpperCase();
     setText(upText);
+    toast("Converted to Uppercase.");
   };
   const toLwCase = () => {
     let lwText = text.toLowerCase();
     setText(lwText);
+    toast("Converted to Lowercase.");
   };
   const toTitleCase = () => {
     let titleText = text.toLowerCase().split(" ");
@@ -19,17 +23,21 @@ export default function Textform(props) {
         titleText[i].charAt(0).toUpperCase() + titleText[i].slice(1);
     }
     setText(titleText.join(" "));
+    toast("Converted to Titlecase.");
   };
   const removeSpaces = () => {
     let removedText = text.replace(/\s+/g, " ");
     setText(removedText);
+    toast("Extra space removed.");
   };
   const clearText = () => {
     let clr = "";
     setText(clr);
+    toast("Text cleared.");
   };
   const copyText = () => {
     navigator.clipboard.writeText(text);
+    toast("Copied to clipboard.");
   };
   const downloadFile = () => {
     const element = document.createElement("a");
@@ -40,6 +48,7 @@ export default function Textform(props) {
     element.download = "TextTools.txt";
     document.body.appendChild(element);
     element.click();
+    toast("File downloaded successfully!");
   };
   const handleChange = (event) => {
     setText(event.target.value);
@@ -47,7 +56,7 @@ export default function Textform(props) {
   debugger;
   return (
     <>
-      <h5>Put your text here</h5>
+      <h5 className="fw-bold">Put your text here</h5>
       <div className="mb-3">
         <label htmlFor="myBox" className="form-label"></label>
         <textarea
@@ -112,8 +121,9 @@ export default function Textform(props) {
         } mx-2 my-1`}
         onClick={downloadFile}
       >
-        <DownloadIcon />
+        <BsDownload />
       </button>
+      <ToastContainer />
 
       <h5 className="my-3">Your text summary</h5>
       <p>

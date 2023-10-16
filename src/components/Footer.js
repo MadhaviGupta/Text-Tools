@@ -1,6 +1,6 @@
 import React from "react";
-import GitHubIcon from "@mui/icons-material/GitHub";
-import LinkedInIcon from "@mui/icons-material/LinkedIn";
+import {BsGithub} from "react-icons/bs";
+import {BsLinkedin} from "react-icons/bs";
 export default function Footer(props) {
   return (
     <>
@@ -15,7 +15,7 @@ export default function Footer(props) {
               role="button"
               data-mdb-ripple-color="dark"
             >
-              <LinkedInIcon />
+              <BsLinkedin />
             </a>
             <a
               className={`btn btn-link btn-floating btn-lg text-${
@@ -25,7 +25,7 @@ export default function Footer(props) {
               role="button"
               data-mdb-ripple-color="dark"
             >
-              <GitHubIcon />
+              <BsGithub />
             </a>
           </section>
         </div>

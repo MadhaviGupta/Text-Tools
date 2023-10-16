@@ -2,4 +2,9 @@ body {
   background-color: #dfdfe3a5;
   font-family: 'Inter', sans-serif;
   font-size: small;
+  font-weight: 600;
+}
+
+.cursor-pointer {
+  cursor: pointer;
 }
