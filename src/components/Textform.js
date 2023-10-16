@@ -134,7 +134,9 @@ export default function Textform(props) {
         draggable
         pauseOnHover
         theme={props.mode}
-        className="fs-6 font-inter"
+        bodyClassName={`fs-6 font-inter rounded-4 text-${
+          props.mode === "dark" ? "light" : "dark"
+        }`}
       />
 
       <h5 className="my-3">Your text summary</h5>
