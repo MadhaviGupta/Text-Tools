@@ -9,7 +9,7 @@ export default function Navbar(props) {
       className={`navbar navbar-expand-lg navbar-${props.mode} bg-${props.mode}`}
     >
       <div className="container-fluid">
-        <h1 className="navbar-brand mx-2 fw-bolder fs-3">
+        <h1 className="navbar-brand mx-2 fw-bold fs-3">
           TextTools
         </h1>
         {props.mode === "light" ? (

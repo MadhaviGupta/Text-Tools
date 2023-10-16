@@ -123,7 +123,19 @@ export default function Textform(props) {
       >
         <BsDownload />
       </button>
-      <ToastContainer />
+      <ToastContainer
+        position="bottom-right"
+        autoClose={3000}
+        hideProgressBar={false}
+        newestOnTop
+        closeOnClick
+        rtl={false}
+        pauseOnFocusLoss
+        draggable
+        pauseOnHover
+        theme={props.mode}
+        className="fs-6 font-inter"
+      />
 
       <h5 className="my-3">Your text summary</h5>
       <p>
